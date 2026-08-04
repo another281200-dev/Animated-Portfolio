@@ -93,23 +93,37 @@ canvas {
 }
 
 /* Custom Cursor */
-/* Removed cursor: none to fix the hidden mouse pointer issue */
-@media (pointer: fine) {
-    /* body, a, button, .pill-btn, .download-btn, .hover-link { cursor: none !important; } */
-}
+body { cursor: none !important; }
+a, button, .pill-btn, .download-btn, .hover-link { cursor: none !important; }
+
 .custom-cursor {
-    position: fixed; top: 0; left: 0; pointer-events: none; z-index: 10001;
+    position: fixed; top: 0; left: 0; pointer-events: none; z-index: 1000000;
     border-radius: 50%;
-    width: 24px; height: 24px; background: #fff;
-    mix-blend-mode: difference;
-    transition: width 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), height 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    width: 10px; height: 10px; 
+    background: #fff;
+    box-shadow: 0 0 15px var(--accent), 0 0 30px #c084fc;
+    transition: width 0.2s, height 0.2s, background 0.2s;
 }
-.custom-cursor-follower { display: none; }
+.custom-cursor-follower {
+    position: fixed; top: 0; left: 0; pointer-events: none; z-index: 999999;
+    border-radius: 50%;
+    width: 48px; height: 48px;
+    background: radial-gradient(circle, rgba(110, 231, 183, 0.3) 0%, rgba(192, 132, 252, 0.15) 50%, transparent 80%);
+    mix-blend-mode: screen;
+    transition: width 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), height 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), background 0.4s;
+}
 .cursor-hover .custom-cursor { 
-    width: 80px; height: 80px;
+    width: 6px; height: 6px;
+    background: var(--accent);
+}
+.cursor-hover .custom-cursor-follower {
+    width: 90px; height: 90px;
+    background: radial-gradient(circle, rgba(110, 231, 183, 0.4) 0%, rgba(192, 132, 252, 0.2) 40%, transparent 80%);
 }
 @media (hover: none) and (pointer: coarse) {
-    .custom-cursor, .custom-cursor-follower { display: none; }
+    body { cursor: default !important; }
+    a, button, .pill-btn, .download-btn, .hover-link { cursor: pointer !important; }
+    .custom-cursor, .custom-cursor-follower { display: none !important; }
 }
 
 /* Navbar */
