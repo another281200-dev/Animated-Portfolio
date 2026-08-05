@@ -438,27 +438,54 @@ textarea.input-field { resize: vertical; min-height: 120px; }
 .form-btn::before { background: #fff; }
 
 @media (max-width: 1024px) {
-    .about-layout { grid-template-columns: 1fr; }
+    .about-layout { grid-template-columns: 1fr; gap: 3rem; }
     .about-visual { aspect-ratio: 16/9; }
+    .section { padding: 6rem 3rem; }
+    .hero { padding: 8rem 3rem 4rem 3rem; }
+    .contact-box { margin: 0 2rem 4rem 2rem; }
 }
+
 @media (max-width: 768px) {
     .hero-buttons { display: flex; flex-direction: column; width: 100%; gap: 1rem; }
     .hero-buttons > a { width: 100%; justify-content: center; }
-    .navbar { padding: 1rem 1.5rem; flex-direction: column; gap: 1rem; justify-content: center; }
+    
+    .navbar { padding: 1rem; flex-direction: column; gap: 0.8rem; justify-content: center; }
     .nav-links { display: flex; gap: 1.2rem; flex-wrap: wrap; justify-content: center; }
     .hover-link { font-size: 0.8rem; }
-    .hero { padding: 10rem 1.5rem 2rem 1.5rem; } /* Adjusted padding */
+    
+    .hero { padding: 10rem 1.5rem 3rem 1.5rem; }
+    .hero-title { font-size: clamp(3rem, 12vw, 5rem); }
+    .ticker { font-size: 0.95rem; }
+    
     .section { padding: 4rem 1.5rem; }
-    .section-title { font-size: clamp(2.5rem, 8vw, 4rem); }
-    .contact-box { margin: 0 0 4rem 0; padding: 3rem 1.5rem; }
-    .bento-grid { grid-template-columns: 1fr; }
-    .hero-title { font-size: clamp(2.5rem, 12vw, 5rem); }
+    .section-title { font-size: clamp(2.2rem, 8vw, 4rem); }
+    .section-header { margin-bottom: 2.5rem; }
+    
+    .contact-box { margin: 0 0 3rem 0; padding: 3rem 1.5rem; border-radius: 12px; }
+    
+    .bento-grid { grid-template-columns: 1fr; gap: 1.2rem; }
+    .bento-card { padding: 2rem; }
+    
+    .code-snippet-container { width: 95%; }
 }
 
 @media (max-width: 480px) {
-    .nav-links { gap: 0.8rem; }
+    .nav-links { gap: 1rem; }
     .hover-link { font-size: 0.75rem; }
-    .hero { padding: 11rem 1rem 2rem 1rem; }
-    .section { padding: 3rem 1rem; }
+    
+    .hero { padding: 9rem 1.2rem 2rem 1.2rem; }
+    .hero-title { font-size: clamp(2.5rem, 12vw, 4rem); }
+    
+    .section { padding: 3rem 1.2rem; }
+    
     .bento-card { padding: 1.5rem; }
+    .bento-title { font-size: 1.5rem; }
+    .bento-num { font-size: 2rem; margin-bottom: 0.8rem; }
+    
+    .about-visual { aspect-ratio: 4/3; }
+    .code-snippet-container { width: 100%; border-radius: 8px; }
+    .code-snippet-body { padding: 15px; font-size: 0.85rem; }
+    
+    .contact-form { gap: 1.2rem; }
+    .input-field { padding: 0.8rem 1.2rem; font-size: 0.95rem; }
 }
