@@ -143,6 +143,16 @@ window.addEventListener("DOMContentLoaded", () => {
     });
 });
 
+// Dynamic Touch Device Detection (handles DevTools toggling without reload)
+function checkTouchDevice() {
+    return ('ontouchstart' in window) || (navigator.maxTouchPoints > 0) || (navigator.msMaxTouchPoints > 0) || window.matchMedia("(pointer: coarse)").matches;
+}
+let isTouchDevice = checkTouchDevice();
+
+window.addEventListener('touchstart', () => {
+    isTouchDevice = true;
+}, { passive: true });
+
 // Custom Cursor Logic
 const cursor = document.querySelector('.custom-cursor');
 const follower = document.querySelector('.custom-cursor-follower');
@@ -156,7 +166,18 @@ if (cursor && follower) {
     const followerX = gsap.quickTo(follower, "x", {duration: 0.4, ease: "power3.out"});
     const followerY = gsap.quickTo(follower, "y", {duration: 0.4, ease: "power3.out"});
 
+    // Initially hide if touch
+    if (isTouchDevice) {
+        cursor.style.display = 'none';
+        follower.style.display = 'none';
+    }
+
     window.addEventListener('mousemove', (e) => {
+        if (isTouchDevice) return;
+        if (cursor.style.display === 'none') {
+            cursor.style.display = 'block';
+            follower.style.display = 'block';
+        }
         cursorX(e.clientX);
         cursorY(e.clientY);
         followerX(e.clientX);
@@ -165,23 +186,22 @@ if (cursor && follower) {
 
     const interactiveElements = document.querySelectorAll('a, button, .pill-btn, .download-btn, .hover-link');
     interactiveElements.forEach(el => {
-        el.addEventListener('mouseenter', () => document.body.classList.add('cursor-hover'));
-        el.addEventListener('mouseleave', () => document.body.classList.remove('cursor-hover'));
+        el.addEventListener('mouseenter', () => { if (!isTouchDevice) document.body.classList.add('cursor-hover'); });
+        el.addEventListener('mouseleave', () => { if (!isTouchDevice) document.body.classList.remove('cursor-hover'); });
     });
 }
 
 // Mouse Interactive Glow
 const mouseGlow = document.getElementById("mouse-glow");
 window.addEventListener('mousemove', (e) => {
-    if (mouseGlow) {
-        mouseGlow.style.opacity = 1;
-        gsap.to(mouseGlow, {
-            x: e.clientX,
-            y: e.clientY,
-            duration: 0.8,
-            ease: "power2.out"
-        });
-    }
+    if (isTouchDevice || !mouseGlow) return;
+    mouseGlow.style.opacity = 1;
+    gsap.to(mouseGlow, {
+        x: e.clientX,
+        y: e.clientY,
+        duration: 0.8,
+        ease: "power2.out"
+    });
 });
 window.addEventListener('mouseleave', () => {
     if (mouseGlow) mouseGlow.style.opacity = 0;
@@ -246,7 +266,28 @@ if (contactForm) {
     });
 }
 
-window.addEventListener('resize', () => requestAnimationFrame(() => renderImage(currentFrameIndex)));
+// Use a debounced resize event for rendering image to prevent issues during device emulation toggle
+let resizeTimeout;
+window.addEventListener('resize', () => {
+    isTouchDevice = checkTouchDevice();
+    if (cursor && follower) {
+        if (isTouchDevice) {
+            cursor.style.display = 'none';
+            follower.style.display = 'none';
+        } else {
+            cursor.style.display = 'block';
+            follower.style.display = 'block';
+        }
+    }
+
+    clearTimeout(resizeTimeout);
+    resizeTimeout = setTimeout(() => {
+        requestAnimationFrame(() => {
+            renderImage(currentFrameIndex);
+            ScrollTrigger.refresh();
+        });
+    }, 150);
+});
 
 // Typewriter Effect for About Section
 const codeSnippet = `const krishna = new Developer({
@@ -292,6 +333,8 @@ if (typewriterText) {
 const magneticElements = document.querySelectorAll('.pill-btn, .download-btn, .hover-link, .nav-logo');
 magneticElements.forEach(el => {
     el.addEventListener('mousemove', (e) => {
+        if (isTouchDevice) return;
+        
         const rect = el.getBoundingClientRect();
         const x = (e.clientX - rect.left) - rect.width / 2;
         const y = (e.clientY - rect.top) - rect.height / 2;
@@ -305,6 +348,7 @@ magneticElements.forEach(el => {
     });
 
     el.addEventListener('mouseleave', () => {
+        if (isTouchDevice) return;
         gsap.to(el, { x: 0, y: 0, duration: 0.8, ease: 'elastic.out(1, 0.3)' });
         const innerText = el.querySelector('.pill-text, .hover-link-inner, .download-icon');
         if (innerText) {
@@ -317,6 +361,8 @@ magneticElements.forEach(el => {
 const bentoCards = document.querySelectorAll('.bento-card, .contact-box');
 bentoCards.forEach(card => {
     card.addEventListener('mousemove', (e) => {
+        if (isTouchDevice) return;
+        
         const rect = card.getBoundingClientRect();
         const x = e.clientX - rect.left;
         const y = e.clientY - rect.top;
@@ -338,6 +384,7 @@ bentoCards.forEach(card => {
     });
 
     card.addEventListener('mouseleave', () => {
+        if (isTouchDevice) return;
         gsap.to(card, { rotateX: 0, rotateY: 0, duration: 0.8, ease: 'elastic.out(1, 0.4)' });
     });
 });
