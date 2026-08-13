@@ -291,12 +291,12 @@ window.addEventListener('resize', () => {
 
 // Typewriter Effect for About Section
 const codeSnippet = `const krishna = new Developer({
-  focus: ['Frontend Magic', 'Robust Backend'],
-  skills: ['React', 'Node.js', 'GSAP'],
+  focus: ['React Frontend', 'Enterprise CCM'],
+  skills: ['Quadient Inspire', 'React', 'SQL'],
   drive: Infinity
 });
 
-krishna.code.until(Bug.count === 0);
+krishna.integrate('REST/SOAP');
 krishna.deploy(); // 🚀`;
 
 const typewriterText = document.getElementById('typewriter-text');
