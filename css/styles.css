@@ -437,6 +437,114 @@ textarea.input-field { resize: vertical; min-height: 120px; }
 }
 .form-btn::before { background: #fff; }
 
+/* Education Card */
+.education-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--surface-border);
+    border-left: 3px solid var(--accent);
+    border-radius: var(--radius);
+    padding: 1.5rem;
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+}
+.education-card:hover {
+    background: rgba(255, 255, 255, 0.06);
+    transform: translateY(-2px);
+}
+.edu-badge {
+    display: inline-block;
+    font-size: 0.75rem; font-weight: 600; text-transform: uppercase;
+    letter-spacing: 0.1em; color: var(--accent);
+    background: rgba(110, 231, 183, 0.1);
+    padding: 0.2rem 0.6rem; border-radius: 50px;
+    margin-bottom: 0.6rem;
+}
+.edu-degree {
+    font-family: 'Syne', sans-serif;
+    font-size: 1.15rem; font-weight: 700; color: #fff;
+    margin: 0 0 0.4rem 0;
+}
+.edu-institution {
+    font-size: 0.95rem; color: var(--text-muted); margin: 0 0 0.5rem 0;
+}
+.edu-timeline {
+    font-size: 0.85rem; color: var(--accent); opacity: 0.9; font-weight: 500;
+}
+
+/* Projects List & Detailed Project Cards */
+.projects-list {
+    display: flex; flex-direction: column; gap: 2rem;
+}
+.project-card {
+    background: rgba(20, 20, 22, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: var(--radius);
+    padding: 2.5rem;
+    backdrop-filter: blur(40px);
+    display: flex; flex-direction: column; gap: 1.5rem;
+    position: relative; overflow: hidden;
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.4s ease;
+}
+.project-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(110, 231, 183, 0.3);
+}
+.project-header {
+    display: flex; justify-content: space-between; align-items: flex-start; gap: 1rem; flex-wrap: wrap;
+}
+.project-title-area {
+    display: flex; flex-direction: column; gap: 0.6rem;
+}
+.project-title {
+    font-family: 'Syne', sans-serif;
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    font-weight: 800; color: #fff; margin: 0;
+}
+.project-metrics {
+    display: flex; gap: 0.8rem; flex-wrap: wrap;
+}
+.metric-chip {
+    font-size: 0.8rem; font-weight: 600; color: var(--accent);
+    background: rgba(110, 231, 183, 0.1); border: 1px solid rgba(110, 231, 183, 0.2);
+    padding: 0.3rem 0.8rem; border-radius: 50px;
+}
+.project-bullets {
+    margin: 0; padding-left: 1.2rem;
+    color: var(--text-muted); font-size: 1rem; line-height: 1.7;
+    display: flex; flex-direction: column; gap: 0.6rem;
+}
+.project-bullets strong { color: #fff; }
+.project-footer {
+    display: flex; justify-content: space-between; align-items: center;
+    gap: 1.5rem; flex-wrap: wrap; padding-top: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+.project-link {
+    text-decoration: none; color: #fff; font-size: 0.9rem; font-weight: 600;
+    display: inline-flex; align-items: center; gap: 0.4rem;
+    transition: color 0.3s;
+}
+.project-link:hover { color: var(--accent); }
+
+/* Quick Contact Info Grid */
+.contact-info-grid {
+    display: flex; justify-content: center; gap: 1.2rem;
+    flex-wrap: wrap; margin-bottom: 2.5rem;
+}
+.contact-chip {
+    display: inline-flex; align-items: center; gap: 0.6rem;
+    padding: 0.7rem 1.4rem; border-radius: 50px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid var(--surface-border);
+    color: var(--text-muted); font-size: 0.95rem; text-decoration: none;
+    transition: all 0.3s ease;
+}
+a.contact-chip:hover {
+    color: var(--accent); border-color: rgba(110, 231, 183, 0.4);
+    background: rgba(110, 231, 183, 0.08); transform: translateY(-2px);
+}
+
+
 @media (max-width: 1024px) {
     .about-layout { grid-template-columns: 1fr; gap: 3rem; }
     .about-visual { aspect-ratio: 16/9; }

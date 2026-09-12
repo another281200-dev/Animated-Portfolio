@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Krishna Nand Gupta | Portfolio</title>
+    <meta name="description" content="Krishna Nand Gupta - Full-Stack Web Developer specializing in React.js, Node.js, PostgreSQL, MongoDB, RESTful APIs, and secure authentication.">
+    <title>Krishna Nand Gupta | Full-Stack Web Developer</title>
     <!-- Typography -->
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Syne:wght@700;800&display=swap" rel="stylesheet">
     <!-- Main Stylesheet -->
     <link rel="stylesheet" href="css/styles.css">
 </head>
@@ -55,19 +56,20 @@
         <ul class="nav-links">
             <li><a href="#about" class="hover-link"><span class="hover-link-inner"><span>About</span><span>About</span></span></a></li>
             <li><a href="#skills" class="hover-link"><span class="hover-link-inner"><span>Skills</span><span>Skills</span></span></a></li>
-            <li><a href="#projects" class="hover-link"><span class="hover-link-inner"><span>Work</span><span>Work</span></span></a></li>
+            <li><a href="#projects" class="hover-link"><span class="hover-link-inner"><span>Projects</span><span>Projects</span></span></a></li>
             <li><a href="#contact" class="hover-link"><span class="hover-link-inner"><span>Contact</span><span>Contact</span></span></a></li>
         </ul>
     </nav>
 
-    <!-- Main Content -->
+    <!-- Background Marquee -->
     <div class="massive-marquee-bg">
         <div class="marquee-inner">
-            <span>FRONTEND DEVELOPER • CCM ENTHUSIAST • QUADIENT INSPIRE LEARNER • REACT SPECIALIST • </span>
-            <span>FRONTEND DEVELOPER • CCM ENTHUSIAST • QUADIENT INSPIRE LEARNER • REACT SPECIALIST • </span>
-            <span>FRONTEND DEVELOPER • CCM ENTHUSIAST • QUADIENT INSPIRE LEARNER • REACT SPECIALIST • </span>
+            <span>FULL-STACK DEVELOPER • REACT.JS • NODE.JS • POSTGRESQL & MONGODB • REST APIS & JWT • </span>
+            <span>FULL-STACK DEVELOPER • REACT.JS • NODE.JS • POSTGRESQL & MONGODB • REST APIS & JWT • </span>
+            <span>FULL-STACK DEVELOPER • REACT.JS • NODE.JS • POSTGRESQL & MONGODB • REST APIS & JWT • </span>
         </div>
     </div>
+    
     <div class="content-layer">
         
         <!-- Hero Section -->
@@ -77,14 +79,14 @@
                 <div class="hero-line"><div class="hero-text">Nand Gupta</div></div>
             </h1>
             
-            <div style="margin-top: 2rem; max-width: 500px; opacity:0; transform:translateY(20px);" id="hero-subtitle">
+            <div style="margin-top: 2rem; max-width: 550px; opacity:0; transform:translateY(20px);" id="hero-subtitle">
                 <div class="ticker">
                     <div class="ticker-inner">
-                        <span>Frontend Developer</span>
-                        <span>CCM & Inspire Intern</span>
-                        <span>React Specialist</span>
-                        <span>Enterprise Dev Enthusiast</span>
-                        <span>Frontend Developer</span> <!-- Duplicate to loop -->
+                        <span>Full-Stack Web Developer</span>
+                        <span>React.js & Node.js Engineer</span>
+                        <span>RESTful APIs & Database Architect</span>
+                        <span>JWT & Secure Auth Specialist</span>
+                        <span>Full-Stack Web Developer</span> <!-- Loop anchor -->
                     </div>
                 </div>
                 
@@ -99,7 +101,7 @@
                         <span class="pill-text">
                             <span class="pill-text-inner">
                                 <span>Resume</span>
-                                <span>Download</span>
+                                <span>Download PDF</span>
                             </span>
                         </span>
                         <span class="download-icon">
@@ -117,8 +119,8 @@
         <!-- About Section -->
         <section class="section" id="about">
             <div class="section-header">
-
-                <h2 class="section-title">Who Am I</h2>
+                <span class="section-label">Professional Profile</span>
+                <h2 class="section-title">Who I Am</h2>
             </div>
             <div class="about-layout">
                 <div class="about-visual about-el">
@@ -134,8 +136,16 @@
                     </div>
                 </div>
                 <div class="about-text about-el">
-                    <p>I'm a <span class="highlight">Computer Science undergraduate</span> driven by a passion for building robust web applications and bridging the gap between front-end aesthetics and enterprise workflows.</p>
-                    <p style="margin-top: 1.5rem;">I specialize in React.js development and am actively developing skills in <strong>Quadient Inspire (CCM)</strong>, structured data (XML/SOAP), and automated document pipelines. Currently pursuing my B.Tech at Ambalika Institute of Management and Technology.</p>
+                    <p>I'm a <span class="highlight">Full-Stack Web Developer</span> with practical experience designing end-to-end web architectures, responsive frontends in <strong>React.js</strong>, and server-side logic in <strong>Node.js</strong>.</p>
+                    <p style="margin-top: 1.2rem;">Skilled in vanilla CSS3 (Flexbox, Grid, CSS Variables), modern JavaScript (ES6+), and database management, with a strong focus on secure authentication, RESTful APIs, and cross-browser performance optimization.</p>
+                    
+                    <!-- Education Card Component -->
+                    <div class="education-card" style="margin-top: 2rem;">
+                        <div class="edu-badge">Education</div>
+                        <h4 class="edu-degree">B.Tech in Computer Science & Engineering</h4>
+                        <p class="edu-institution">Ambalika Institute of Management and Technology • Lucknow, UP</p>
+                        <span class="edu-timeline">Expected Graduation: 2027</span>
+                    </div>
                 </div>
             </div>
         </section>
@@ -143,114 +153,221 @@
         <!-- Skills Section -->
         <section class="section" id="skills">
             <div class="section-header">
-
-                <h2 class="section-title">What I Do</h2>
+                <span class="section-label">Capabilities</span>
+                <h2 class="section-title">Technical Stack</h2>
             </div>
             <div class="bento-grid">
                 <div class="bento-card bento-el">
                     <div>
                         <div class="bento-num">01</div>
-                        <h3 class="bento-title">Frontend Dev</h3>
-                        <p class="bento-desc">Crafting responsive, accessible, and elegant interfaces that deliver exceptional user experiences across all devices.</p>
+                        <h3 class="bento-title">Frontend Engineering</h3>
+                        <p class="bento-desc">Designing responsive, pixel-perfect, accessible frontends with modern state management, smooth animations, and custom CSS architectures.</p>
                     </div>
                     <div class="bento-tech">
                         <span class="tech-pill">React.js</span>
-                        <span class="tech-pill">Tailwind CSS</span>
-                        <span class="tech-pill">JavaScript</span>
-                        <span class="tech-pill">HTML/CSS</span>
+                        <span class="tech-pill">JavaScript (ES6+)</span>
+                        <span class="tech-pill">Modern CSS3 (Flex/Grid)</span>
+                        <span class="tech-pill">DOM Manipulation</span>
+                        <span class="tech-pill">ARIA Accessibility</span>
                     </div>
                 </div>
+
                 <div class="bento-card bento-el">
                     <div>
                         <div class="bento-num">02</div>
-                        <h3 class="bento-title">CCM & Enterprise</h3>
-                        <p class="bento-desc">Developing workflows with Quadient Inspire, working with structured data (XML/JSON/SQL), and enterprise app integration.</p>
+                        <h3 class="bento-title">Backend & REST APIs</h3>
+                        <p class="bento-desc">Architecting robust server-side logic, structured RESTful JSON endpoints, token-based authentication (JWT), and security middleware.</p>
                     </div>
                     <div class="bento-tech">
-                        <span class="tech-pill">Quadient Inspire</span>
-                        <span class="tech-pill">SQL</span>
-                        <span class="tech-pill">XML & SOAP</span>
+                        <span class="tech-pill">Node.js</span>
+                        <span class="tech-pill">RESTful APIs</span>
+                        <span class="tech-pill">JWT Auth</span>
+                        <span class="tech-pill">Session Management</span>
+                        <span class="tech-pill">Input Sanitization</span>
                     </div>
                 </div>
+
                 <div class="bento-card bento-el">
                     <div>
                         <div class="bento-num">03</div>
-                        <h3 class="bento-title">Code to Cloud</h3>
-                        <p class="bento-desc">Collaborative workflows utilizing version control, CI/CD pipelines, REST APIs, and modern development environments.</p>
+                        <h3 class="bento-title">Databases & Modeling</h3>
+                        <p class="bento-desc">Designing scalable relational and document-based data models, optimizing SQL queries, and managing persistent app state.</p>
                     </div>
                     <div class="bento-tech">
-                        <span class="tech-pill">Git / GitHub Actions</span>
+                        <span class="tech-pill">PostgreSQL</span>
+                        <span class="tech-pill">MongoDB</span>
+                        <span class="tech-pill">SQL</span>
+                        <span class="tech-pill">Relational Schema</span>
+                        <span class="tech-pill">Document Schema</span>
+                    </div>
+                </div>
+
+                <div class="bento-card bento-el">
+                    <div>
+                        <div class="bento-num">04</div>
+                        <h3 class="bento-title">DevOps & Cloud Tools</h3>
+                        <p class="bento-desc">Automating CI/CD deployment pipelines, coordinating multi-branch Git workflows, API testing, and cloud hosting.</p>
+                    </div>
+                    <div class="bento-tech">
+                        <span class="tech-pill">Git / GitHub</span>
+                        <span class="tech-pill">GitHub Actions</span>
                         <span class="tech-pill">Vercel</span>
-                        <span class="tech-pill">REST APIs</span>
+                        <span class="tech-pill">Postman</span>
+                        <span class="tech-pill">VS Code</span>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Projects Section -->
+        <!-- Key Projects Section -->
         <section class="section" id="projects">
             <div class="section-header">
-
-                <h2 class="section-title">Projects</h2>
+                <span class="section-label">Featured Work</span>
+                <h2 class="section-title">Key Projects</h2>
             </div>
-            <div class="bento-grid">
-                <div class="bento-card bento-el">
-                    <div>
-                        <h3 class="bento-title">CRM Dashboard</h3>
-                        <p class="bento-desc">Architected a responsive React dashboard, reducing page load by ~40% through optimized rendering and API-integrated state management.</p>
+            <div class="projects-list">
+
+                <!-- Project 1 -->
+                <div class="project-card bento-el">
+                    <div class="project-header">
+                        <div class="project-title-area">
+                            <h3 class="project-title">Full-Stack CRM & Analytics Platform</h3>
+                            <div class="project-metrics">
+                                <span class="metric-chip">🚀 +35% Task Efficiency</span>
+                                <span class="metric-chip">⚡ -40% Page Latency</span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="bento-tech">
-                        <span class="tech-pill">React.js</span>
-                        <span class="tech-pill">Tailwind CSS</span>
+                    
+                    <ul class="project-bullets">
+                        <li><strong>System Architecture:</strong> Architected an end-to-end CRM dashboard with modular React components and backend Node.js APIs for tracking administrative workflows.</li>
+                        <li><strong>Performance Optimization:</strong> Improved task completion efficiency by 35% and cut page latency by 40% via asynchronous data handling and clean CSS rendering.</li>
+                        <li><strong>Responsive UI Layout:</strong> Designed modular CSS layouts utilizing Flexbox, CSS Grid, and custom variables for rapid cross-device rendering.</li>
+                        <li><strong>Team Collaboration:</strong> Coordinated a 3-member GitHub workflow using feature branches, pull requests, and peer code reviews.</li>
+                    </ul>
+
+                    <div class="project-footer">
+                        <div class="bento-tech">
+                            <span class="tech-pill">React.js</span>
+                            <span class="tech-pill">Node.js</span>
+                            <span class="tech-pill">Modern CSS3</span>
+                            <span class="tech-pill">RESTful APIs</span>
+                            <span class="tech-pill">Git</span>
+                        </div>
+                        <a href="https://github.com/another281200-dev" target="_blank" class="project-link">
+                            <span>View Source</span> ↗
+                        </a>
                     </div>
                 </div>
-                <div class="bento-card bento-el">
-                    <div>
-                        <h3 class="bento-title">E-Commerce UI</h3>
-                        <p class="bento-desc">Built a fully responsive frontend with reusable product cards, filter drawers, and seamless Vercel deployment integration.</p>
+
+                <!-- Project 2 -->
+                <div class="project-card bento-el">
+                    <div class="project-header">
+                        <div class="project-title-area">
+                            <h3 class="project-title">Full-Stack E-Commerce Web Application</h3>
+                            <div class="project-metrics">
+                                <span class="metric-chip">📦 Zero-Dependency CSS</span>
+                                <span class="metric-chip">🔄 Automated CI/CD</span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="bento-tech">
-                        <span class="tech-pill">React.js</span>
-                        <span class="tech-pill">Vercel</span>
+                    
+                    <ul class="project-bullets">
+                        <li><strong>Core Functionality:</strong> Developed a responsive full-stack store supporting product catalogs, category filtering, cart state persistence, and simulated checkout.</li>
+                        <li><strong>Backend Data Management:</strong> Handled inventory and order processing on the server using structured REST endpoints and database querying in PostgreSQL/MongoDB.</li>
+                        <li><strong>Optimized CSS Architecture:</strong> Implemented a zero-dependency custom CSS architecture for product cards, navigation, and modal drawers to minimize payload.</li>
+                        <li><strong>DevOps & Deployment:</strong> Automated continuous integration and deployment pipelines using GitHub Actions and Vercel.</li>
+                    </ul>
+
+                    <div class="project-footer">
+                        <div class="bento-tech">
+                            <span class="tech-pill">React.js</span>
+                            <span class="tech-pill">Node.js</span>
+                            <span class="tech-pill">Modern CSS3</span>
+                            <span class="tech-pill">PostgreSQL / MongoDB</span>
+                            <span class="tech-pill">Vercel</span>
+                        </div>
+                        <a href="https://github.com/another281200-dev" target="_blank" class="project-link">
+                            <span>View Source</span> ↗
+                        </a>
                     </div>
                 </div>
-                <div class="bento-card bento-el">
-                    <div>
-                        <h3 class="bento-title">User Registration UI</h3>
-                        <p class="bento-desc">Implemented real-time form validation logic—transferable to rule-based CCM workflows—with semantic HTML and ARIA labels.</p>
+
+                <!-- Project 3 -->
+                <div class="project-card bento-el">
+                    <div class="project-header">
+                        <div class="project-title-area">
+                            <h3 class="project-title">Authentication & Session Management System</h3>
+                            <div class="project-metrics">
+                                <span class="metric-chip">🔒 Password Hashing</span>
+                                <span class="metric-chip">🔑 JWT Validation</span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="bento-tech">
-                        <span class="tech-pill">HTML5/CSS3</span>
-                        <span class="tech-pill">JavaScript</span>
+                    
+                    <ul class="project-bullets">
+                        <li><strong>Secure Authentication:</strong> Engineered secure user authentication using password hashing, token validation (JWT), and real-time form verification.</li>
+                        <li><strong>Accessible Styling:</strong> Styled all input elements, modals, and error states using accessible, semantic HTML5 and vanilla CSS with ARIA compliance.</li>
+                        <li><strong>Security Middleware:</strong> Built server-side validation middleware to sanitize user inputs and restrict unauthorized route access.</li>
+                    </ul>
+
+                    <div class="project-footer">
+                        <div class="bento-tech">
+                            <span class="tech-pill">JavaScript (ES6+)</span>
+                            <span class="tech-pill">Node.js</span>
+                            <span class="tech-pill">CSS3</span>
+                            <span class="tech-pill">HTML5</span>
+                            <span class="tech-pill">JWT</span>
+                        </div>
+                        <a href="https://github.com/another281200-dev" target="_blank" class="project-link">
+                            <span>View Source</span> ↗
+                        </a>
                     </div>
                 </div>
+
             </div>
         </section>
 
         <!-- Contact Section -->
         <section class="section" id="contact" style="padding-bottom: 2rem;">
             <div class="contact-box bento-el">
-
-                <h2 class="section-title" style="margin-bottom: 1.5rem; font-size: clamp(2.5rem, 6vw, 5rem);">Let's Connect</h2>
-                <p style="font-size: 1.2rem; color: var(--text-muted); max-width: 500px; margin: 0 auto 3rem auto; font-weight: 300;">
-                    Currently seeking a CCM/Quadient Inspire Developer internship to apply development fundamentals to enterprise document automation. My inbox is open!
+                <span class="section-label" style="margin-bottom: 1.5rem;">Get In Touch</span>
+                <h2 class="section-title" style="margin-bottom: 1.5rem; font-size: clamp(2.5rem, 6vw, 5rem);">Let's Build Together</h2>
+                <p style="font-size: 1.15rem; color: var(--text-muted); max-width: 600px; margin: 0 auto 2.5rem auto; font-weight: 300; line-height: 1.6;">
+                    Seeking a Full-Stack Web Developer role to build scalable client-server applications and production-ready web software. My inbox is open!
                 </p>
+
+                <!-- Quick Contact Info Pills -->
+                <div class="contact-info-grid">
+                    <a href="mailto:madehsiyakrishna666@gmail.com" class="contact-chip">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                        <span>madehsiyakrishna666@gmail.com</span>
+                    </a>
+                    <a href="tel:+919569521822" class="contact-chip">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                        <span>+91 9569521822</span>
+                    </a>
+                    <div class="contact-chip">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                        <span>Gorakhpur, Uttar Pradesh</span>
+                    </div>
+                </div>
                 
-                <!-- New Contact Form -->
+                <!-- Contact Form -->
                 <form id="contact-form" class="contact-form" novalidate>
                     <div class="input-group">
                         <label for="name">Name</label>
-                        <input type="text" id="name" class="input-field" placeholder="John Doe" autocomplete="off">
+                        <input type="text" id="name" class="input-field" placeholder="Your Name" autocomplete="off">
                         <span class="form-error"></span>
                     </div>
                     <div class="input-group">
                         <label for="email">Email</label>
-                        <input type="email" id="email" class="input-field" placeholder="john@example.com" autocomplete="off">
+                        <input type="email" id="email" class="input-field" placeholder="your.email@example.com" autocomplete="off">
                         <span class="form-error"></span>
                     </div>
                     <div class="input-group">
                         <label for="message">Message</label>
-                        <textarea id="message" class="input-field" placeholder="Hello, I'd like to discuss..."></textarea>
+                        <textarea id="message" class="input-field" placeholder="Hello Krishna, I'd like to discuss a project / full-stack opportunity..."></textarea>
                         <span class="form-error"></span>
                     </div>
                     <button type="submit" class="form-btn">
@@ -258,12 +375,12 @@
                     </button>
                 </form>
                 
-                <div style="margin-top: 4rem; display: flex; justify-content: center; gap: 3rem;">
+                <div style="margin-top: 3.5rem; display: flex; justify-content: center; gap: 3rem; flex-wrap: wrap;">
                     <a href="https://github.com/another281200-dev" target="_blank" class="hover-link">
-                        <span class="hover-link-inner"><span>GitHub</span><span>GitHub</span></span>
+                        <span class="hover-link-inner"><span>GitHub</span><span>github.com/another281200-dev ↗</span></span>
                     </a>
-                    <a href="https://linkedin.com/in/krishna-nand-gupta" target="_blank" class="hover-link">
-                        <span class="hover-link-inner"><span>LinkedIn</span><span>LinkedIn</span></span>
+                    <a href="https://linkedin.com/in/krishna-nand-gupta-894629385/" target="_blank" class="hover-link">
+                        <span class="hover-link-inner"><span>LinkedIn</span><span>linkedin.com/in/krishna-nand-gupta ↗</span></span>
                     </a>
                 </div>
             </div>
@@ -280,3 +397,4 @@
 
 </body>
 </html>
+

@@ -290,14 +290,15 @@ window.addEventListener('resize', () => {
 });
 
 // Typewriter Effect for About Section
-const codeSnippet = `const krishna = new Developer({
-  focus: ['React Frontend', 'Enterprise CCM'],
-  skills: ['Quadient Inspire', 'React', 'SQL'],
-  drive: Infinity
+const codeSnippet = `const krishna = new FullStackDeveloper({
+  frontend: ['React.js', 'Modern CSS3', 'ARIA'],
+  backend: ['Node.js', 'REST APIs', 'JWT Auth'],
+  databases: ['PostgreSQL', 'MongoDB', 'SQL'],
+  devops: ['Git', 'GitHub Actions', 'Vercel']
 });
 
-krishna.integrate('REST/SOAP');
-krishna.deploy(); // 🚀`;
+krishna.architectSystem();
+krishna.optimizePerformance(); // 🚀`;
 
 const typewriterText = document.getElementById('typewriter-text');
 let charIndex = 0;
@@ -330,7 +331,7 @@ if (typewriterText) {
 
 
 // Magnetic Buttons & Links Logic
-const magneticElements = document.querySelectorAll('.pill-btn, .download-btn, .hover-link, .nav-logo');
+const magneticElements = document.querySelectorAll('.pill-btn, .download-btn, .hover-link, .nav-logo, .project-link, .contact-chip');
 magneticElements.forEach(el => {
     el.addEventListener('mousemove', (e) => {
         if (isTouchDevice) return;
@@ -357,8 +358,8 @@ magneticElements.forEach(el => {
     });
 });
 
-// 3D Tilt for Bento Cards
-const bentoCards = document.querySelectorAll('.bento-card, .contact-box');
+// 3D Tilt for Bento Cards & Project Cards
+const bentoCards = document.querySelectorAll('.bento-card, .contact-box, .project-card');
 bentoCards.forEach(card => {
     card.addEventListener('mousemove', (e) => {
         if (isTouchDevice) return;
@@ -388,3 +389,4 @@ bentoCards.forEach(card => {
         gsap.to(card, { rotateX: 0, rotateY: 0, duration: 0.8, ease: 'elastic.out(1, 0.4)' });
     });
 });
+
